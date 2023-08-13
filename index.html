@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javacript Bulb On / Off</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: sans-serif;
+            background-color: rgb(104, 104, 186);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+       h1{
+        color: white;
+        padding:20px;
+       }
+        .btn
+        {
+            background-color: yellow;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            background-color: rgb(234, 234, 133);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+       <h1>Can you turn the light on?</h1>
+       <button id="btnTurn" class="btn" onclick="turnOn();">Turn On the Light</button>
+       <img src="./img/light-bulb-png-off.png" alt="light-Off" srcset="" id="myImage" style="width: 200px;">
+       <button id="btnOff" class="btn" onclick="turnOff();">Turn Off the Light</button>
+
+       <script>
+
+           function turnOn()
+           {
+               document.getElementById("myImage").src='./img/light-bulb-png-on.png';
+            }
+            function turnOff()
+           {
+               document.getElementById("myImage").src='./img/light-bulb-png-off.png';
+            }
+            </script>
+    </div>
+</body>
+</html>
